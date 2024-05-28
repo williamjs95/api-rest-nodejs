@@ -1,11 +1,18 @@
-interface User {
-  birthYear: number;
-}
+import fastify from 'fastify'
+import { knex } from './database'
 
-function calculateAgeOfUser(user: User) {
-  return new Date().getFullYear() - user.birthYear;
-}
+const app = fastify()
 
-calculateAgeOfUser({
-  birthYear: 1990
-});
+app.get('/hello', async () => {
+  const tables = await knex('sqlite_schema').select('*')
+
+  return tables
+})
+
+app
+  .listen({
+    port: 3333,
+  })
+  .then(() => {
+    console.log('HTTP server is running on port 3333')
+  })
