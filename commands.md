@@ -35,11 +35,24 @@ npm install knex sqlite3
 npm install ts-node @types/knex
 
 >> Cria primeira migração do database (ts)
-npx knex migrate:make create-documents
-npm run knex -- migrate:make create-documents
+npx knex migrate:make create-transactions
+npm run knex -- migrate:make create-transactions
 
+>> Roda aplicação com knex
+npx knex migrate:latest
+npm run knex -- migrate:latest
 
+>> Desfaz última migração
+npm run knex -- migrate:rollback
 
+>> Instala dotenv (variáveis de ambiente)
+npm i dotenv
+
+>> Instala biblioteca para validação das variáveis de ambiente
+npm i zod
+
+>> Instala biblioteca para cookies
+npm i @fastify/cookie
 
 
 
