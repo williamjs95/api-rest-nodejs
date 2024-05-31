@@ -1,58 +1,71 @@
-> > Inicia aplicação node
-> > npm init -y
+>> Initialize node application
+npm init -y
 
-> > Roda script do package.json
-> > npm run dev
+>> Run package.json script
+npm run
 
-> > Instala TypeScript como depedência de desenvolvimento
-> > npm i -D typescript
+>> Install TypeScript as a development dependency
+npm i -D typescript
 
-> > Instala types/node como depedência de desenvolvimento
-> > npm install -D @types/node
+>> Install types/node as a development dependency
+npm install -D @types/node
 
-> > Cria arquivo de configurações do TypeScript
-> > npx tsc --init
+>> Create TypeScript configuration file
+npx tsc --init
 
-> > Converte typescript em javascript
-> > npx tsc src/index.ts
+>> Convert TypeScript to JavaScript
+npx tsc src/index.ts
 
-> > Automatiza conversão de typescript para javascript
-> > npm install tsx -D
+>> Automate TypeScript to JavaScript conversion
+npm install tsx -D
 
-> > Roda aplicação com tsx (apenas em dev)
-> > npx tsx src/server.ts
+>> Run application with tsx (dev only)
+npx tsx src/server.ts
 
-> > Instala fastfy
-> > npm i fastify
+>> Install fastify
+npm i fastify
 
-> > Instala ESLint com pacote de configuração da RocketSeat
-npm i eslint @rocketseat/esling-config -D
+>> Install ESLint with RocketSeat configuration package
+npm i eslint @rocketseat/eslint-config -D
 
->> Instala Knex com sqlite3
+>> Install Knex with sqlite3
 npm install knex sqlite3
 
->> Instala pacote ts para knex
+>> Install ts package for knex
 npm install ts-node @types/knex
 
->> Cria primeira migração do database (ts)
-npx knex migrate:make create-transactions
-npm run knex -- migrate:make create-transactions
+>> Create the first database migration (ts)
+npx knex migrate create-transactions
+OR
+npm run knex -- migrate create-transactions
 
->> Roda aplicação com knex
-npx knex migrate:latest
+>> Run application with knex
+npx knex migrate
+OR
+npm run knex -- migrate
+
+>> Undo the last migration
 npm run knex -- migrate:latest
 
->> Desfaz última migração
-npm run knex -- migrate:rollback
-
->> Instala dotenv (variáveis de ambiente)
+>> Install dotenv (environment variables)
 npm i dotenv
 
->> Instala biblioteca para validação das variáveis de ambiente
+>> Install library for environment variables validation
 npm i zod
 
->> Instala biblioteca para cookies
+>> Install library for cookies
 npm i @fastify/cookie
 
+>> Install Vitest for E2E tests
+npm i vitest -D
 
+>> Run test
+npx vitest
+OR
+npm run test
 
+>> Install supertest as a development dependency
+npm i supertest -D
+
+>> Install types for supertest as a development dependency
+npm i -D @types/supertest
