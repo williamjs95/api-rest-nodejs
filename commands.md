@@ -13,6 +13,9 @@ npm install -D @types/node
 >> Create TypeScript configuration file
 npx tsc --init
 
+>> Roda projeto com TypeScrit
+npx tsc
+
 >> Convert TypeScript to JavaScript
 npx tsc src/index.ts
 
@@ -44,7 +47,7 @@ npx knex migrate
 OR
 npm run knex -- migrate
 
->> Undo the last migration
+>> Last migration
 npm run knex -- migrate:latest
 
 >> Install dotenv (environment variables)
