@@ -72,3 +72,11 @@ npm i supertest -D
 
 >> Install types for supertest as a development dependency
 npm i -D @types/supertest
+
+>> Install global dependency for building (convert from typescript to javascript)
+npm i tsup -D
+
+>> Building for deploy (convert from typescript to javascript)
+tsup src --out-dir build
+OR
+npm run build
