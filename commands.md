@@ -47,7 +47,7 @@ npx knex migrate
 OR
 npm run knex -- migrate
 
->> Last migration
+>> Run migration
 npm run knex -- migrate:latest
 
 >> Install dotenv (environment variables)
