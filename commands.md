@@ -80,3 +80,6 @@ npm i tsup -D
 tsup src --out-dir build
 OR
 npm run build
+
+>> Install Postgre as a production depedency
+npm i pg
